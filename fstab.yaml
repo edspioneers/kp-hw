@@ -1,0 +1,4 @@
+mountpoints:
+  /:
+    url: https://content.da.live/edspioneers/kp-hw/
+    type: markup
