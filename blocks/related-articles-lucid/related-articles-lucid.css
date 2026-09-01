@@ -80,7 +80,7 @@
 }
 
 .ral-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 12%);
   text-decoration: none;
 }
 
@@ -146,7 +146,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.65),
+    rgb(255 255 255 / 65%),
     transparent
   );
   animation: ral-shimmer 1.4s ease-in-out infinite;

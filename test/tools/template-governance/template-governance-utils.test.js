@@ -333,7 +333,9 @@ describe('template-governance-utils.js', () => {
         .join('')}</div>`;
       const metadataSection = `<div>${metadataBlock}</div>`;
       const otherSection = '<div><div class="columns"><div>a</div></div></div>';
-      const sections = lastSection ? [otherSection, metadataSection] : [metadataSection, otherSection];
+      const sections = lastSection
+        ? [otherSection, metadataSection]
+        : [metadataSection, otherSection];
       return `<html><body><main>${sections.join('')}</main></body></html>`;
     }
 

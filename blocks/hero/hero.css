@@ -276,7 +276,7 @@
     padding: 40px;
     background-color: var(--color-white);
     border-radius: 16px;
-    box-shadow: 0 12px 40px rgba(13, 28, 61, 0.12);
+    box-shadow: 0 12px 40px rgb(13 28 61 / 12%);
     color: var(--color-navy);
   }
 
@@ -341,7 +341,7 @@ main .section:has(.hero.landing) > .block-content {
     border-radius: 8px;
     border: 1px solid #dde3e8;
     padding: 24px;
-    box-shadow: 0 8px 28px rgba(13, 28, 61, 0.08);
+    box-shadow: 0 8px 28px rgb(13 28 61 / 8%);
     width: 100%;
     margin: 0;
     color: var(--color-text);

@@ -58,8 +58,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto auto;
-    column-gap: 24px;
-    row-gap: 0;
+    gap: 0 24px;
 
     .plan-compare-col {
       grid-row: 1 / -1;

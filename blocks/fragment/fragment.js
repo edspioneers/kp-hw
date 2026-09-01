@@ -105,8 +105,10 @@ export default async function init(a) {
       ? fragment.querySelectorAll(':scope > *')
       : [fragment];
     for (const [idx, child] of children.entries()) {
-      // If relative, create a unique ID to help fragments be identified after being inserted into the page
-      if (path.startsWith('/')) child.id = btoa(encodeURIComponent(`${path}/${idx + 1}`));
+      // Relative paths: assign a stable ID so fragments can be found after insertion.
+      if (path.startsWith('/')) {
+        child.id = btoa(encodeURIComponent(`${path}/${idx + 1}`));
+      }
       elToReplace.insertAdjacentElement('afterend', child);
     }
     elToReplace.remove();

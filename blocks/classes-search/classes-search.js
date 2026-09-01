@@ -158,7 +158,8 @@ export default function init(el) {
   }
 
   async function loadTopics(rop) {
-    const token = ++reqToken;
+    reqToken += 1;
+    const token = reqToken;
     state.rop = rop;
     showTopicsLoading();
     try {

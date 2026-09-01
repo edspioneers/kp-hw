@@ -260,11 +260,15 @@ export default async function init(el) {
 
   // --- active-filter chips ----------------------------------------------
   function renderChips() {
-    if (!state.selected.length) { chipsEl.hidden = true; chipsEl.innerHTML = ''; return; }
+    if (!state.selected.length) {
+      chipsEl.hidden = true;
+      chipsEl.innerHTML = '';
+      return;
+    }
     chipsEl.hidden = false;
-    chipsEl.innerHTML = state.selected.map((s) => `
+    chipsEl.innerHTML = `${state.selected.map((s) => `
       <button type="button" class="ac-chip" data-value="${esc(s)}"><span>${esc(s)}</span><span class="ac-chip__x" aria-hidden="true">✕</span></button>`).join('')
-      + '<button type="button" class="ac-chip-clear">Clear all</button>';
+       }<button type="button" class="ac-chip-clear">Clear all</button>`;
   }
   chipsEl.addEventListener('click', (e) => {
     if (e.target.closest('.ac-chip-clear')) {
@@ -292,7 +296,8 @@ export default async function init(el) {
 
   // --- load + render ----------------------------------------------------
   async function load() {
-    const token = ++reqToken;
+    reqToken += 1;
+    const token = reqToken;
     listingEl.innerHTML = '<div class="ac-spinner" role="status" aria-label="Loading articles"></div>';
     try {
       const data = await callProxy(buildArticleUrl({

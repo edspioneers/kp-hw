@@ -7,12 +7,18 @@ async function fetchIcon(name) {
   if (cache[name] !== undefined) return cache[name];
   try {
     const resp = await fetch(`${codeBase}/img/icons/${name}.svg`);
-    if (!resp.ok) { cache[name] = null; return null; }
+    if (!resp.ok) {
+      cache[name] = null;
+      return null;
+    }
     const text = await resp.text();
     const tmp = document.createElement('div');
     tmp.innerHTML = text;
     const el = tmp.querySelector('svg');
-    if (!el) { cache[name] = null; return null; }
+    if (!el) {
+      cache[name] = null;
+      return null;
+    }
     cache[name] = {
       viewBox: el.getAttribute('viewBox') || '0 0 24 24',
       innerHTML: el.innerHTML,

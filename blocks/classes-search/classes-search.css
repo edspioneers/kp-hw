@@ -187,6 +187,7 @@
 }
 
 .classes-search .cs-submit:hover { background-color: var(--cs-blue-dark); }
+
 .classes-search .cs-submit:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgb(0 116 173 / 35%);
@@ -274,6 +275,7 @@
   .classes-search { padding: 16px; }
 
   .classes-search .cs-form { flex-direction: column; align-items: stretch; }
+
   .classes-search .cs-location,
   .classes-search .cs-topic { flex: 1 1 auto; width: 100%; }
   .classes-search .cs-submit { width: 100%; margin-top: 0; }

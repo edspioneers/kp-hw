@@ -115,7 +115,11 @@ export async function fetchResults({
   rop = DEFAULT_ROP, topicLabel, offset = 0, filterTokens = [],
 }) {
   return callProxy(buildKpSearchUrl({
-    source: TOPIC_SOURCE, rop, topicLabel, filterTokens,
-    listShow: 10, vstate: `root|root-${offset}-10`,
+    source: TOPIC_SOURCE,
+    rop,
+    topicLabel,
+    filterTokens,
+    listShow: 10,
+    vstate: `root|root-${offset}-10`,
   }));
 }

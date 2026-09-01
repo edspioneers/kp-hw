@@ -274,6 +274,7 @@
 
   /* KP semantic overrides */
   color-scheme: light;
+
   --color-text: #000;
   --color-link: var(--color-blue-accent);
   --color-link-hover: #005a87;
@@ -905,6 +906,7 @@ main > .section[data-spacing="xxl"] { padding: calc(var(--spacing-xxl) * 2) 0; }
   }
 
   /* peek-background: image peeks visually below the section bottom edge */
+
   /* Note: "peek-background" is a style value, so it becomes a class */
   .section.peek-background .section-background img {
     object-position: 0 40%;
@@ -1016,8 +1018,7 @@ main .section.full-width > div {
 main > .section.table-grid > .block-content {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--spacing-l);
-  row-gap: var(--spacing-l);
+  gap: var(--spacing-l) var(--spacing-l);
   max-width: var(--content-max-width);
   margin-inline: auto;
   box-sizing: border-box;

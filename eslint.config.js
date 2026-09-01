@@ -5,6 +5,8 @@ import { recommended, source, test } from '@adobe/eslint-config-helix';
 export default defineConfig([
   globalIgnores([
     '**/deps',
+    // Fastly Compute@Edge — uses fastly:* imports and its own lint conventions.
+    'aem-edge-functions/**',
     // Storybook static build output (committed for DA hosting) — minified bundles.
     'tools/storybook/dist',
     'tools/storybook/storybook-static',
@@ -77,5 +79,13 @@ export default defineConfig([
       'no-underscore-dangle': 0,
       'no-unused-expressions': 0,
     },
-  }
+  },
+  {
+    // EDS blocks commonly wire handlers before helper definitions in the same closure.
+    files: ['blocks/**/*.js'],
+    rules: {
+      'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
+      'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    },
+  },
 ]);

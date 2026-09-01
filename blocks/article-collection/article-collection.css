@@ -369,6 +369,7 @@
 .article-collection .ac-modal__note { margin: 0 0 20px; color: var(--ac-ink); }
 
 .article-collection .ac-group { padding-left: 16px; border-left: 1px solid var(--ac-border); }
+
 .article-collection .ac-group__label {
   margin: 0 0 8px;
   font-weight: 700;

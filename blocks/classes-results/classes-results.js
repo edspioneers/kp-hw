@@ -272,7 +272,8 @@ export default function init(el) {
 
   async function loadTopics() {
     const current = topicSelect.value || initialTopic;
-    const token = ++reqToken;
+    reqToken += 1;
+    const token = reqToken;
     showTopicsLoading();
     try {
       const topics = await fetchTopics({ rop: state.rop });
@@ -318,7 +319,10 @@ export default function init(el) {
     // Hide a filter group entirely when the current search has no options for it
     // (e.g. Facility for online-only topics).
     group.hidden = bins.length === 0;
-    if (!bins.length) { body.innerHTML = ''; return; }
+    if (!bins.length) {
+      body.innerHTML = '';
+      return;
+    }
     const selected = filters[g.key] || '';
     // Auto-expand the list if the selected option is hidden behind "Show More".
     const selIdx = bins.findIndex((b) => b.token === selected);
@@ -430,7 +434,8 @@ export default function init(el) {
     const topicLabel = currentTopicLabel();
     if (!topicLabel) return;
     const offset = append ? resultsState.docs.length : 0;
-    const token = ++resultsToken;
+    resultsToken += 1;
+    const token = resultsToken;
 
     if (append) {
       viewMoreBtn.disabled = true;
@@ -540,7 +545,10 @@ export default function init(el) {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!topicSelect.value) { topicSelect.focus(); return; }
+    if (!topicSelect.value) {
+      topicSelect.focus();
+      return;
+    }
     // A new base search resets the sidebar filters.
     FILTER_GROUPS.forEach((g) => { filters[g.key] = null; });
     filters.fee = false;

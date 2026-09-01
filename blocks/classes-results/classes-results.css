@@ -173,7 +173,7 @@
   max-width: 206px;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .classes-results .cr-submit {
     flex: 1 1 auto;
     max-width: unset;
@@ -181,6 +181,7 @@
 }
 
 .classes-results .cr-submit:hover { background-color: var(--cr-blue-dark); }
+
 .classes-results .cr-submit:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgb(0 116 173 / 35%);
@@ -196,6 +197,7 @@
 }
 
 /* --- Results / listing -------------------------------------------------- */
+
 /* White results area below the grey search bar (full-bleed to block edges),
    laid out as a left filter sidebar + main results column. */
 .classes-results .cr-results {

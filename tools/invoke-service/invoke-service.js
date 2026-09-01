@@ -423,7 +423,8 @@ class RefDemoInvokeService extends LitElement {
     super();
     this._tab = 'tasks';
     this._view = 'confirm';
-    this._loadingMessage = REVIEW_PROGRESS_SEQUENCE[0];
+    const [loadingMessage] = REVIEW_PROGRESS_SEQUENCE;
+    this._loadingMessage = loadingMessage;
     this._tasksState = 'idle';
     this._tasks = [];
     this._taskQuery = '';
@@ -546,7 +547,11 @@ class RefDemoInvokeService extends LitElement {
     this._view = 'loading';
     this.startProgressSequence();
     try {
-      await invokeExternalService(this.token, this.context, (message) => this.handleServiceProgress(message));
+      await invokeExternalService(
+        this.token,
+        this.context,
+        (message) => this.handleServiceProgress(message),
+      );
       this.advanceProgressTo(REVIEW_PROGRESS_SEQUENCE.length - 1);
       this.setLoadingMessage('Done.');
       this._isSuccess = true;
