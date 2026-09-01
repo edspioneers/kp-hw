@@ -9,9 +9,9 @@ data:
         - name: healthwise
           domain: ixbapi.healthwise.net
         - name: eds-prod
-          domain: main--kp-hw--adobedrago.aem.live
+          domain: main--kp-hw--edspioneers.aem.live
         - name: eds-preview
-          domain: main--kp-hw--adobedrago.aem.page
+          domain: main--kp-hw--edspioneers.aem.page
   # hw.key — define the underlying secret in Cloud Manager first, then this
   # references it. Read in code via SecretStoreManager.getSecret('HW_KEY').
   secrets:

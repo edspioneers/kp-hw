@@ -33,11 +33,11 @@ Edge Delivery Services has no build step and no deploy step. AEM Code Sync watch
 | Environment | URL | Updated by |
 |---|---|---|
 | Local | `http://localhost:3000` (`aem up`) | Your local code, with content proxied from the preview environment (`.aem.page`) |
-| Feature preview | `https://{branch}--kp-hw--AdobeDrago.aem.page/` | Push to that branch |
-| Production preview | `https://main--kp-hw--AdobeDrago.aem.page/` | Merge to `main` |
-| Production live | `https://main--kp-hw--AdobeDrago.aem.live/` | Author publish in DA |
+| Feature preview | `https://{branch}--kp-hw--edspioneers.aem.page/` | Push to that branch |
+| Production preview | `https://main--kp-hw--edspioneers.aem.page/` | Merge to `main` |
+| Production live | `https://main--kp-hw--edspioneers.aem.live/` | Author publish in DA |
 
-Content is authored in Document Authoring: https://da.live/#/AdobeDrago/kp-hw
+Content is authored in Document Authoring: https://da.live/#/edspioneers/kp-hw
 
 ### Daily workflow
 

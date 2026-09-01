@@ -7,7 +7,7 @@
 // canvas, which applies it to the live element.
 //
 // For the channel to reach the canvas, this plugin must be registered on the SAME host as the
-// editing canvas (e.g. main--kp-hw--adobedrago.preview.da.live) — the browser blocks it across
+// editing canvas (e.g. main--kp-hw--edspioneers.preview.da.live) — the browser blocks it across
 // origins.
 
 const CHANNEL = 'kp-style-switcher';

@@ -18,7 +18,7 @@ import {
 describe('template-governance-utils.js', () => {
   describe('buildSourceUrl', () => {
     it('builds a DA source URL for a path', () => {
-      expect(buildSourceUrl('/index-copy', 'adobedrago', 'kp-hw')).to.equal('https://content.da.live/adobedrago/kp-hw/index-copy');
+      expect(buildSourceUrl('/index-copy', 'edspioneers', 'kp-hw')).to.equal('https://content.da.live/edspioneers/kp-hw/index-copy');
     });
   });
 
